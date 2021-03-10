@@ -12,23 +12,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-            val Bt1 = findViewById<Button>(R.id.Button_1)
-            val Bt2 = findViewById<Button>(R.id.Button_2)
+        val Bt1 = findViewById<Button>(R.id.Button_1)
+        val Bt2 = findViewById<Button>(R.id.Button_2)
 
-            Bt1.setOnClickListener{
-                var message = Toast.makeText(applicationContext, "Thank You", Toast.LENGTH_LONG)
-                message.show()
+        Bt1.setOnClickListener{
+            var message = Toast.makeText(applicationContext, "Thank You", Toast.LENGTH_LONG)
+            message.show()
         }
 
-            Bt2.setOnClickListener{
-                var message = Toast.makeText(applicationContext, "Congratulations", Toast.LENGTH_SHORT)
-                message.show()
+        Bt2.setOnClickListener{
+            val message = Toast.makeText(applicationContext, "Congratulations", Toast.LENGTH_SHORT)
+            message.show()
 
-                var adress = "https://play.google.com/store/apps/details?id=com.FilipCzerwinski.Jushroom"
-                var myapp = Intent(Intent.ACTION_VIEW, Uri.parse(adress))
-                startActivity(myapp)
-            }
-
-
+            val adress = "https://play.google.com/store/apps/details?id=com.FilipCzerwinski.Jushroom"
+            val myapp = Intent(Intent.ACTION_VIEW, Uri.parse(adress))
+            startActivity(myapp)
+        }
     }
 }
