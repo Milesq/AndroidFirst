@@ -75,28 +75,21 @@
 
     <RadioGroup
         android:id="@+id/Sex_Group"
-        android:layout_width="108dp"
-        android:layout_height="281dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.237"
+        app:layout_constraintHorizontal_bias="0.07"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email"
-        app:layout_constraintVertical_bias="0.419">
+        app:layout_constraintVertical_bias="0.277">
 
         <RadioButton
             android:id="@+id/female_RB"
             android:layout_width="109dp"
-            android:layout_height="44dp"
+            android:layout_height="match_parent"
             android:layout_marginTop="88dp"
             android:text="Female" />
-
-        <RadioButton
-            android:id="@+id/other_RB"
-            android:layout_width="110dp"
-            android:layout_height="46dp"
-            android:layout_marginTop="28dp"
-            android:text="Other" />
 
         <RadioButton
             android:id="@+id/male_RB"
@@ -104,6 +97,13 @@
             android:layout_height="48dp"
             android:layout_marginTop="24dp"
             android:text="Male" />
+
+        <RadioButton
+            android:id="@+id/other_RB"
+            android:layout_width="110dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="28dp"
+            android:text="Other" />
 
     </RadioGroup>
 
@@ -114,9 +114,46 @@
         android:text="Choose Sex:"
         app:layout_constraintBottom_toTopOf="@+id/Sex_Group"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.227"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/email"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="POTWIERDŹ"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.891" />
+
+    <RadioGroup
+        android:layout_width="183dp"
+        android:layout_height="111dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/submit"
+        app:layout_constraintHorizontal_bias="0.017"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Sex_Group"
+        app:layout_constraintVertical_bias="0.222">
+
+        <RadioButton
+            android:id="@+id/newsletter_RB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Subskrubuję newsletter" />
+
+        <RadioButton
+            android:id="@+id/regulations_CHB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Akceptuję regulamin" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@ class SecondActivity : AppCompatActivity() {
         serviceEditEmail(email, warn_email)              //wyświetlanie i sprawdzanie poprawności email
         serviceEditPassword(password, warn_password)     //wyświetlanie i sprawdzanie poprawności password
 
-        Sex_Group.setOnCheckedChangeListener { group, checkedId ->
+      /*  Sex_Group.setOnCheckedChangeListener { group, checkedId ->
             run {
                 val intencjaAktywująca: Intent = Intent(applicationContext,MainActivity::class.java)
                 var RB: RadioButton = findViewById(checkedId)
@@ -27,6 +27,16 @@ class SecondActivity : AppCompatActivity() {
                 startActivity(intencjaAktywująca)
             }
 
+        }
+*/
+    }
+    fun  submitData(view: View){
+
+        if(!regulations_CHB.isChecked)
+            Toast.makeText(applicationContext, "Proszę potwierdzić regulamin", Toast.LENGTH_SHORT)
+                    .show()
+        else{
+            val intent = Intent(applicationContext), ProfileActivity::class.java)
         }
 
     }
